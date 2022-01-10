@@ -16,11 +16,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set the value
-        id: step_one
-        run: |
-          echo "PR_AUTHOR=${{ github.event.pull_request.user.login }}" >> $GITHUB_ENV
-          echo "PR_AUTHOR=${{ github.event.issue.user.login }}" >> $GITHUB_ENV
+      - name: ACTIONS_ALLOW_UNSECURE_COMMANDS
+        run: echo 'ACTIONS_ALLOW_UNSECURE_COMMANDS=true' >> $GITHUB_ENV
 
       - uses: actions/checkout@v2
       - run: npm install
