@@ -19,11 +19,8 @@ jobs:
       - name: Set the value
         id: step_one
         run: |
-          echo "action_state=yellow" >> $GITHUB_ENV
-      - name: Use the value
-        id: step_two
-        run: |
-          echo "${{ env.action_state }}"
+          echo "PR_AUTHOR=${{ github.event.pull_request.user.login }}" >> $GITHUB_ENV
+          echo "PR_AUTHOR=${{ github.event.issue.user.login }}" >> $GITHUB_ENV
 
       - uses: actions/checkout@v2
       - run: npm install
