@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 export default ({ onSignIn }) => {
   const ref = useRef(null);
   const history = useHistory();
+  console.log("Auth App");
 
   useEffect(() => {
     const { onParentNavigate } = mount(ref.current, {
