@@ -21,7 +21,7 @@ const devConfig = {
         // la sintaxis de los remotes es tal que las keys son los nombres de los diferentes módulos que queremos importar en nuestro contenedor
         // los values van a ser los directorios donde el remoteEntry file para esos modulos
         marketing: "marketing@http://localhost:8081/remoteEntry.js", // este marketing@ es la clave que debe coincidir con el name de nuestro micro
-        // auth: "auth@http://localhost:8082/remoteEntry.js", // este marketing@ es la clave que debe coincidir con el name de nuestro micro
+        auth: "auth@http://localhost:8082/remoteEntry.js",
       },
       // shared: ["react", "react-dom"],
       shared: packageJson.dependencies,
