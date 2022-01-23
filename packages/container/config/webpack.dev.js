@@ -22,6 +22,7 @@ const devConfig = {
         // los values van a ser los directorios donde el remoteEntry file para esos modulos
         marketing: "marketing@http://localhost:8081/remoteEntry.js", // este marketing@ es la clave que debe coincidir con el name de nuestro micro
         auth: "auth@http://localhost:8082/remoteEntry.js",
+        dashboard: "dashboard@http://localhost:8083/remoteEntry.js",
       },
       // shared: ["react", "react-dom"],
       shared: packageJson.dependencies,
